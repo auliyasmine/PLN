@@ -6,6 +6,12 @@
   <title>Detail Berita | PT PLN (Persero)</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="logopln.jpg" />
+  <style>
+    #detail-content .btn {
+      display: inline-block;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -40,17 +46,29 @@
       "1": {
         title: "PLN dan Kemendiktiristek Jalin Kerja Sama Riset dan Pengembangan",
         date: "5 Mei 2025",
-        content: "PT PLN (Persero) dan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek) menjalin kerja sama strategis untuk memperkuat riset dan pengembangan di sektor ketenagalistrikan. Penandatanganan MoU dilakukan di Jakarta dan disaksikan langsung oleh perwakilan kedua lembaga."
+        content: `
+          <p>Pada 5 Mei 2025, PT PLN (Persero) dan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek) menandatangani Nota Kesepahaman (MoU) untuk memperkuat kolaborasi dalam riset dan pengembangan di bidang ketenagalistrikan. Kerja sama ini mencakup pengembangan teknologi energi baru dan terbarukan, digitalisasi sistem kelistrikan, serta peningkatan kapasitas sumber daya manusia melalui program magang dan penelitian bersama.</p>
+          <p>Langkah ini sejalan dengan upaya PLN dalam mendukung transisi energi dan pencapaian target Net Zero Emissions pada tahun 2060. Melalui kolaborasi ini, diharapkan tercipta inovasi-inovasi yang dapat meningkatkan efisiensi dan keberlanjutan sektor energi di Indonesia.</p>
+          <p><a href="https://web.pln.co.id/media/siaran-pers/2025/05/pln-dan-kemendiktisaintek-jalin-kerja-sama-riset-dan-pengembangan-bidang-ketenagalistrikan" target="_blank">Baca sumber resmi</a></p>
+        `
       },
       "2": {
         title: "Dua Srikandi PLN Raih Penghargaan Women's Inspiration Awards 2025",
         date: "4 Mei 2025",
-        content: "Dua karyawati PLN meraih penghargaan Women’s Inspiration Awards 2025 atas dedikasi dan inovasi mereka dalam mendukung transformasi digital dan keberlanjutan layanan energi di Indonesia."
+        content: `
+          <p>Pada 4 Mei 2025, dua karyawati PT PLN (Persero) meraih penghargaan Women's Inspiration Awards 2025 yang diselenggarakan oleh Kementerian Pemberdayaan Perempuan dan Perlindungan Anak (KemenPPPA). Penghargaan ini diberikan sebagai apresiasi atas dedikasi dan kontribusi mereka dalam memajukan sektor ketenagalistrikan di Indonesia.</p>
+          <p>Salah satu penerima penghargaan, Dini Sulistyawati, dikenal sebagai pemimpin yang tangguh di wilayah kepulauan Bangka Belitung. Di tengah perannya sebagai ibu rumah tangga, Dini berhasil mengantarkan berbagai pencapaian strategis yang berdampak positif bagi masyarakat dan organisasi. Penghargaan ini mencerminkan komitmen PLN dalam menciptakan lingkungan kerja yang inklusif dan mendukung kepemimpinan perempuan.</p>
+          <p><a href="https://web.pln.co.id/media/siaran-pers/2025/05/menginspirasi-dua-srikandi-pln-raih-penghargaan-tertinggi-womens-inspiration-awards-2025-dari-menteri-pppa" target="_blank">Baca sumber resmi</a></p>
+        `
       },
       "3": {
         title: "PLN Sukses Layani Listrik Tanpa Kedip Selama MXGP Seri 2 Lombok",
         date: "9 Juli 2024",
-        content: "PT PLN (Persero) sukses menjaga pasokan listrik tetap andal dan tanpa gangguan selama pelaksanaan MXGP Seri 2 di Lombok. Kegiatan ini mendukung suksesnya event internasional yang dihadiri ribuan penonton."
+        content: `
+          <p>Pada 6-7 Juli 2024, PT PLN (Persero) berhasil menyediakan pasokan listrik yang andal dan tanpa gangguan selama gelaran Motocross Grand Prix (MXGP) Seri 2 di Sirkuit Selaparang, Lombok. PLN memastikan layanan kelistrikan berjalan optimal mulai dari pembangkit, transmisi, distribusi, hingga posko siaga selama acara berlangsung.</p>
+          <p>Keberhasilan ini mendapat apresiasi dari Penjabat Gubernur NTB, Mayjen (Purn.) Hassanudin, yang menyatakan bahwa listrik andal dari PLN berkontribusi besar dalam menyukseskan event internasional tersebut. Capaian ini menunjukkan komitmen PLN dalam mendukung berbagai kegiatan nasional dan internasional melalui penyediaan listrik yang handal.</p>
+          <p><a href="https://web.pln.co.id/media/warta-pln/2024/07/pln-sukses-layani-listrik-tanpa-kedip-selama-gelaran-mxgp-seri-2-lombok" target="_blank">Baca sumber resmi</a></p>
+        `
       }
     };
 
@@ -62,7 +80,7 @@
       document.getElementById('detail-content').innerHTML = `
         <h3>${detail.title}</h3>
         <p><strong>Tanggal:</strong> ${detail.date}</p>
-        <p>${detail.content}</p>
+        ${detail.content}
         <a href="news.html" class="btn">Kembali ke Berita</a>
       `;
     } else {
