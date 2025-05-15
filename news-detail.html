@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail Berita | PT PLN (Persero)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logo-pln.png" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="images/logo-pln.png" alt="Logo PLN" height="40" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section" id="news-detail">
+    <h2>Detail Berita</h2>
+    <div id="detail-content">
+      <p>Memuat berita...</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PT PLN (Persero). All rights reserved.</p>
+  </footer>
+
+  <script>
+    const newsData = {
+      "1": {
+        title: "PLN dan Kemendiktiristek Jalin Kerja Sama Riset dan Pengembangan",
+        date: "5 Mei 2025",
+        content: "PT PLN (Persero) dan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek) menjalin kerja sama strategis untuk memperkuat riset dan pengembangan di sektor ketenagalistrikan. Penandatanganan MoU dilakukan di Jakarta dan disaksikan langsung oleh perwakilan kedua lembaga."
+      },
+      "2": {
+        title: "Dua Srikandi PLN Raih Penghargaan Women's Inspiration Awards 2025",
+        date: "4 Mei 2025",
+        content: "Dua karyawati PLN meraih penghargaan Women’s Inspiration Awards 2025 atas dedikasi dan inovasi mereka dalam mendukung transformasi digital dan keberlanjutan layanan energi di Indonesia."
+      },
+      "3": {
+        title: "PLN Sukses Layani Listrik Tanpa Kedip Selama MXGP Seri 2 Lombok",
+        date: "9 Juli 2024",
+        content: "PT PLN (Persero) sukses menjaga pasokan listrik tetap andal dan tanpa gangguan selama pelaksanaan MXGP Seri 2 di Lombok. Kegiatan ini mendukung suksesnya event internasional yang dihadiri ribuan penonton."
+      }
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    const detail = newsData[id];
+
+    if (detail) {
+      document.getElementById('detail-content').innerHTML = `
+        <h3>${detail.title}</h3>
+        <p><strong>Tanggal:</strong> ${detail.date}</p>
+        <p>${detail.content}</p>
+        <a href="news.html" class="btn">Kembali ke Berita</a>
+      `;
+    } else {
+      document.getElementById('detail-content').innerHTML = '<p>Berita tidak ditemukan.</p>';
+    }
+  </script>
+</body>
+</html>
